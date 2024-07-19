@@ -55,3 +55,6 @@ steps:
       'push',
       'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/payments/production'
     ]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
