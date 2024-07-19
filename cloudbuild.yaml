@@ -7,13 +7,15 @@ steps:
       '-f',
       'apps/reservations/Dockerfile',
       '.'
-    ]
+     ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'push',
-      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/reservations/production'
-    ]
-  - name: 'gcr.io/cloud-builders/docker'
+      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/reservations/production',
+    ]   
+
+
+    - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build', 
       '-t',
@@ -21,13 +23,15 @@ steps:
       '-f',
       'apps/auth/Dockerfile',
       '.'
-    ]
+     ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'push',
-      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/auth/production'
-    ]
-  - name: 'gcr.io/cloud-builders/docker'
+      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/auth/production',
+    ]   
+
+
+    - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build', 
       '-t',
@@ -35,13 +39,15 @@ steps:
       '-f',
       'apps/notifications/Dockerfile',
       '.'
-    ]
+     ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'push',
-      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/notifications/production'
-    ]
-  - name: 'gcr.io/cloud-builders/docker'
+      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/notifications/production',
+    ]   
+
+
+    - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build', 
       '-t',
@@ -49,9 +55,9 @@ steps:
       '-f',
       'apps/payments/Dockerfile',
       '.'
-    ]
+     ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'push',
-      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/payments/production'
-    ]
+      'europe-west2-docker.pkg.dev/genuine-compass-429914-t4/payments/production',
+    ]   
